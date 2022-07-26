@@ -1,0 +1,10 @@
+<div class="parent">
+  <h2>Parent Component</h2>
+  <ul>
+    <li *ngFor="let bev of beverages">{{bev}}</li>
+  </ul>
+  <label for="beverage-input">Change today's beverage: </label>
+  <input type="text" id="beverage-input" #newBeverage>
+  <button (click)="changeBeverage(newBeverage.value); newBeverage.value=''">Change</button>
+  <app-beverages></app-beverages>
+</div>
