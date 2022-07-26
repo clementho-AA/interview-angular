@@ -1,6 +1,14 @@
 # InterviewAngular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+**Given:** 
+
+An app with parent and child components
+
+**Solve:**
+1. Input a beverage in parent component's field will change "Today's beverage" field in child component
+2. Input a beverage in child component's field will add the beverage to beverage list in parent component
+
+-----------------------
 
 ## Development server
 
@@ -25,3 +33,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
