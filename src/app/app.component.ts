@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from "./app.service";
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  currentBeverage = 'coffee';
   beverages: string[];
 
-  constructor() {
+  constructor(private service: AppService) {
+    this.service.getBeverageList().subscribe(item => this.beverages = item);
   }
 
   addBeverage(newBeverage: string) {
@@ -16,6 +19,6 @@ export class AppComponent {
   }
 
   changeBeverage(beverage: string) {
-    // Change today's beverage in child component
+    this.currentBeverage = beverage;
   }
 }

@@ -6,5 +6,8 @@
   <label for="beverage-input">Change today's beverage: </label>
   <input type="text" id="beverage-input" #newBeverage>
   <button (click)="changeBeverage(newBeverage.value); newBeverage.value=''">Change</button>
-  <app-beverages></app-beverages>
+  <app-beverages
+    [currentBeverage]="currentBeverage"
+    (newBeverageEvent)="addBeverage($event)"
+  ></app-beverages>
 </div>

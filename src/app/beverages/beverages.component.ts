@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-beverages',
@@ -7,15 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BeveragesComponent implements OnInit {
 
-  currentBeverage = 'tea';
+  @Input() currentBeverage: string;
+  @Output() newBeverageEvent = new EventEmitter<string>();
 
   constructor() { }
 
   ngOnInit() {
+    this.currentBeverage = 'tea';
   }
 
   addNewBeverage(value: string) {
-    // Add beverage to beverages list in parent component
+    this.newBeverageEvent.emit(value);
   }
 
 }
