@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  beverages = ['milk', 'tea', 'coffee', 'juice'];
+  beverages: string[];
+
+  constructor() {
+  }
 
   addBeverage(newBeverage: string) {
     this.beverages.push(newBeverage);
