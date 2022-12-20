@@ -5,6 +5,7 @@
 An app with parent and child components
 
 **Solve:**
+1. Display the list of beverages from app.service via getBeverageList
 1. Input a beverage in parent component's field will change "Today's beverage" field in child component
 2. Input a beverage in child component's field will add the beverage to beverage list in parent component
 
